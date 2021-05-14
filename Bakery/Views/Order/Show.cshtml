@@ -2,4 +2,19 @@
   Layout = "_Layout";
 }
 
-<h1>Show Indiviual Item Stuff Template Page</h1>
+<h1>@Model["Order"].Title</h1>
+<div class="orderPage">
+  <h3>Description:</h3>
+  <p>@Model["Order"].Description</p>
+  <h3>Price:</h3>
+  <p>$@Model["Order"].Price.00</p>
+  <h3>Date:</h3>
+  <p>@Model["Order"].Date</p>
+</div>
+
+<br>
+<a href='/vendors/@Model["Vendor"].Id'><button class="btn btn-outline-secondary">Return to Order list</button></a>
+<br>
+<br>
+<a href="/vendors"><button class="btn btn-outline-secondary">Return to vendor list</button></a>
+
