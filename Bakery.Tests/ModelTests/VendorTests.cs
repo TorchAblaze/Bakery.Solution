@@ -6,8 +6,12 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceofVendor_Vendor()
     {
