@@ -2,6 +2,10 @@ body {
   text-align: center;
 }
 
+ol {
+  text-align: left;
+}
+
 div#footer {
   position: fixed;
   bottom: 0px;
