@@ -76,5 +76,15 @@ namespace Bakery.Tests
       string result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
+    [TestMethod]
+    public void SetDate_SetDate_String()
+    {
+      string date = "5/18/2021";
+      Order newOrder = new Order("Weekly Eclairs", "450 eclairs to be delivered every Wednesday at 1000", 825, date);
+      string updatedDate = "5/19/2021";
+      newOrder.Date = updatedDate;
+      string result = newOrder.Date;
+      Assert.AreEqual(updatedDate, result);
+    }
   }
 }
