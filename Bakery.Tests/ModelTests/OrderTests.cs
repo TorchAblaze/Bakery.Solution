@@ -106,5 +106,12 @@ namespace Bakery.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      Order newOrder = new Order("Weekly Croissants", "500 chocolate croissants to be delivered every Tuesdsay at 0900", 800, "5/18/2021");
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
