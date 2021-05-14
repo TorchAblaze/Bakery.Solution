@@ -86,5 +86,12 @@ namespace Bakery.Tests
       string result = newOrder.Date;
       Assert.AreEqual(updatedDate, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> {};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

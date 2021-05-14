@@ -7,7 +7,8 @@ namespace Bakery.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
-     public string Date { get; set; }
+    public string Date { get; set; }
+    private static List<Order> _instances = new List<Order> {};
     
     public Order (string title, string description, int price, string date)
     {
@@ -15,6 +16,10 @@ namespace Bakery.Models
       Description = description;
       Price = price;
       Date = date;
+    }
+    public static List<Order> GetAll()
+    {
+      return _instances;
     }
   }
 }
