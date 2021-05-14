@@ -4,4 +4,17 @@
   Layout = "_Layout";
 }
 
-<h1>Show Category Stuff Template Page</h1>
+<h1>Orders for @Model["Vendor"].Name</h1>
+<h3>@Model["Vendor"].Description</h3>
+
+<ol>
+@foreach (Order order in @Model["Orders"])
+{
+  <li><a href='/vendors/@Model["Vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+}
+</ol>
+
+<br>
+<br>
+<a href='/vendors/@Model["Vendor"].Id/orders/new'><button class="btn btn-outline-secondary">Add a new order</button></a>
+<a href="/vendors"><button class="btn btn-outline-secondary">Return to vendor list</button></a>
