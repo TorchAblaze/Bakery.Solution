@@ -5,14 +5,24 @@
 }
 
 <h1>Orders for @Model["Vendor"].Name</h1>
-<h3>Vendor Description: @Model["Vendor"].Description</h3>
+<br>
 
-<ol>
-@foreach (Order order in @Model["Orders"])
+@if (@Model["Orders"].Count == 0)
 {
-  <li><a href='/vendors/@Model["Vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  <br>
+  <h3>No orders for this vendor have been added yet!</h3>
 }
-</ol>
+else
+{
+  <h3>Vendor Description: @Model["Vendor"].Description</h3>
+
+  <ol>
+  @foreach (Order order in @Model["Orders"])
+  {
+    <li><a href='/vendors/@Model["Vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+  </ol>
+}
 
 <br>
 <br>
