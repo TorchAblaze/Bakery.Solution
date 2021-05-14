@@ -41,6 +41,16 @@ namespace Bakery.Tests
       Assert.AreEqual(description, result);
     }
     [TestMethod]
+    public void SetDescription_ReturnDescription_String()
+    {
+      string description = "500 chocolate croissants to be delivered every Tuesday at 0900";
+      Order newOrder = new Order("Weekly Eclairs", description, 0, "test");
+      string updatedDescription = "450 eclairs to be delivered every Wednesday at 1000";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
+    [TestMethod]
     public void GetPrice_ReturnPrice_Int()
     {
       int price = 800;
