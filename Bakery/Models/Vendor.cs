@@ -13,9 +13,10 @@ namespace Bakery.Models
     public Vendor(string name, string description)
     {
       Name = name;
+      Description = description;
       _instances.Add(this);
       Id = _instances.Count;
-      Description = description;
+      Orders = new List<Order>{};      
     }
     public static void ClearAll()
     {
@@ -31,7 +32,7 @@ namespace Bakery.Models
     }
     public void AddOrder(Order order)
     {
-      // Orders.Add(order);
+      Orders.Add(order);
     }
   }
 }
