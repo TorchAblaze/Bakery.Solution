@@ -113,5 +113,13 @@ namespace Bakery.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder1 = new Order("Weekly Croissants", "500 chocolate croissants to be delivered every Tuesdsay at 0900", 800, "5/18/2021");
+      Order newOrder2 = new Order("Weekly Eclairs", "450 eclairs to be delivered every Wednesday at 1000", 825, "5/19/2021");
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
