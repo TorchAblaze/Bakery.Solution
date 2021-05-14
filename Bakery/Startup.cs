@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace TemplateNameSpace
+namespace Bakery
 {
   public class Startup
   {
@@ -37,7 +37,7 @@ namespace TemplateNameSpace
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("TEMPLATE!");
+        await context.Response.WriteAsync("PIERRE'S BAKERY");
       });
     }
   }
