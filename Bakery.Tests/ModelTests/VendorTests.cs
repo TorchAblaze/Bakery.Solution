@@ -11,16 +11,24 @@ namespace Bakery.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceofVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test");
+      Vendor newVendor = new Vendor("test", "test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string name = "Suzie's Cafe";
-      Vendor newVendor = new Vendor(name);
+      Vendor newVendor = new Vendor(name, "test");
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
+    }
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "Cafe: 123 Some Street Address, Point of Contact: Suzie";
+      Vendor newVendor = new Vendor("Suzie's Cafe", description);
+      string result = newVendor.Description;
+      Assert.AreEqual(description, result);
     }
   }
 }
