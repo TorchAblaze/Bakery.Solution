@@ -6,7 +6,7 @@
 
 ## Description
 
-This website was created for a fictional local business owner named Pierre to keep track of vendor orders. Pierre is greeted on the homepage and is provided two separate links to click on, one directs the user to a form where they can add vendors and a description for that vendor, the other directs the user to a webpage where all the vendors are listed. Once a vendor is created and added to the list, Pierre can add orders for each vendor via the "Add New Order" button. Once the order's information is submitted, the order is added to the vendor's order list. Pierre can view all the orders from a vendor by clicking on a vendor in the vendor list and can view all an order's details but clicking on an order in the order list.
+This website was created for a fictional local business owner named Pierre to keep track of vendor orders. Pierre is greeted on the homepage and is provided two separate links to click on, one directs the user to a form where they can add vendors and a description for that vendor, the other directs the user to a webpage where all the vendors are listed. Once a vendor is created and added to the list, Pierre can add orders for each vendor via the "Add New Order" button. Once the order's information is submitted, the order is added to the vendor's order list. Pierre can view all the orders from a vendor by clicking on a vendor in the vendor list and can view all an order's details by clicking on an order in the order list.
 
 ## Setup and Use
 
