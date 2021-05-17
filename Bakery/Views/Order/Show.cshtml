@@ -13,8 +13,13 @@
 </div>
 
 <br>
+<form action='/vendors/@Model["Vendor"].Id/orders/delete' method="post">
+  <input id="vendorId" name="vendorId" type="hidden" value='@Model["Vendor"].Id'>
+  <input id="orderId" name="orderId" type="hidden" value='@Model["Order"].Id'>
+  <button type="submit" name="button" class="btn btn-outline-danger">Delete this order</button>
+</form>
+<br>
 <a href='/vendors/@Model["Vendor"].Id'><button class="btn btn-outline-secondary">Return to Order list</button></a>
 <br>
 <br>
 <a href="/vendors"><button class="btn btn-outline-secondary">Return to vendor list</button></a>
-

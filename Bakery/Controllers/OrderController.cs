@@ -22,5 +22,12 @@ namespace Bakery.Controllers
       vendorAndOrders.Add("Vendor", vendor);
       return View(vendorAndOrders);
     }
+    [HttpPost("/vendors/{vendorId}/orders/delete")]
+    public ActionResult Delete(int vendorId, int orderId)
+    {
+      Vendor vendor = Vendor.Find(vendorId);
+      vendor.Orders.RemoveAt(orderId-1);
+      return View();
+    }
   }
 }
